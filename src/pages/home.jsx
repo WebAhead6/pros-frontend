@@ -1,8 +1,18 @@
 import React from "react";
-import EachProfission from "../pages/component/eachProfission";
+import Profission from "./component/Profission";
 import "./home.css";
+import { getData, API_BASE } from "../utils/data_helpers";
 
 const Home = function () {
+  const [professions, setProfessions] = React.useState([{ name: "Electric" }]);
+  React.useEffect(() => {
+    const url = `${API_BASE}`;
+    getData(url).then((data) => setProfessions(data));
+  }, []);
+  if (!professions) {
+    return <h3>...Loading</h3>;
+  }
+
   return (
     <div className="beyondTitle">
       <h1 className="title">home/Professions</h1>
@@ -19,12 +29,14 @@ const Home = function () {
           placeholder="Search for Professional Worker"
           className="searchProfessional"
         />
-        <EachProfission />
-        <EachProfission />
-        <EachProfission />
-        <EachProfission />
-        <EachProfission />
-        <EachProfission />
+        {professions.map((profession) => (
+          <Profission profession={profession} />
+        ))}
+        <Profission />
+        <Profission />
+        <Profission />
+        <Profission />
+        <Profission />
       </div>
     </div>
   );
