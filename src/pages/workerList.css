@@ -1,0 +1,21 @@
+.professionTitle {
+  background-color: #6e3d0f;
+}
+
+.list {
+  background-color: #9d4e15;
+}
+
+.rating,
+.location,
+.trustedWorkers {
+  background-color: #f7a325;
+  border-radius: 20px;
+  margin-left: 20px;
+}
+
+.back {
+  background-color: #f7a325;
+  margin-left: -400px;
+}
+

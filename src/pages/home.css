@@ -1,0 +1,21 @@
+.title {
+  background-color: #6e3d0f;
+}
+
+.beyondTitle {
+  background-color: #9d4e15;
+}
+
+.News,
+.Reviews,
+.trustedWorkers {
+  background-color: #f7a325;
+  border-radius: 20px;
+  margin-left: 20px;
+}
+
+.searchProfessional {
+  width: 50%;
+  border-radius: 20px;
+  text-align: center;
+}
