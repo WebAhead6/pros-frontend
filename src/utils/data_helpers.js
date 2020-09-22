@@ -1,19 +1,21 @@
-// import { accessToken } from "../../token";
-export const API_BASE = "https://localhost:4000/";
+//**** WHEN CONNECTION WITH BACKEND **** //
 
-const checkResponse = (response) => {
-  if (response.status !== 200) {
-    console.log(`Error with the request! ${response.status}`);
-    return;
-  }
-  return response.json();
-};
+// // import { accessToken } from "../../token";
+// export const API_BASE = "https://localhost:4000/";
 
-export const getData = (url) => {
-  // return fetch(`${url}?access_token=${accessToken}`)
-  return fetch(`${url}`)
-    .then(checkResponse)
-    .catch((err) => {
-      throw new Error(`fetch getUserData failed ${err}`);
-    });
-};
+// const checkResponse = (response) => {
+//   if (response.status !== 200) {
+//     console.log(`Error with the request! ${response.status}`);
+//     return;
+//   }
+//   return response.json();
+// };
+
+// export const getData = (url) => {
+//   // return fetch(`${url}?access_token=${accessToken}`)
+//   return fetch(`${url}`)
+//     .then(checkResponse)
+//     .catch((err) => {
+//       throw new Error(`fetch getUserData failed ${err}`);
+//     });
+// };

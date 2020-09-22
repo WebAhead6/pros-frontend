@@ -1,0 +1,17 @@
+.title {
+  background-color: #6e3d0f;
+  margin-top: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.list {
+    background-color: #9d4e15;
+  }
+
+  .back {
+    background-color: #f7a325;
+    margin-left: -400px;
+  }

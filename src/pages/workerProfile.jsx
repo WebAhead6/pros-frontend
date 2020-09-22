@@ -1,14 +1,17 @@
 import React from "react";
-import EachProfile from "../pages/component/eachProfile";
-const Worker = function () {
+import Profile from "./component/Profile";
+import "./workerProfile.css";
+
+const WProfile = function () {
+  const [workers, setWorkers] = React.useState([{ name: "Mervat" }]);
   return (
-    <div>
-      <h1>workerProfile</h1>
+    <div className="beyondTitle">
+      <h1 className="title">workerProfile</h1>
       <span></span>
-      <EachProfile />
-      <button>back</button>
+      <Profile />
+      <button className="back">back</button>
     </div>
   );
 };
 
-export default Worker;
+export default WProfile;

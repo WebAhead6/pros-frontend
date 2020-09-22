@@ -1,6 +1,6 @@
 import React from "react";
-
-const EachWorker = ({
+import "./worker.css";
+const Worker = ({
   profPic,
   setWorkerName,
   setRating,
@@ -8,13 +8,13 @@ const EachWorker = ({
   setAvillability,
   setWorkArea,
   setCall,
+  handleClick,
 }) => (
-  <div>
-    <h1>Each worker in that Profission</h1>
+  <div className="worker" onClick={handleClick}>
     <span></span>
     ProfilePic
     <img className="profissionIcon" src={profPic} />
-    <div>Worker Name {setWorkerName} </div>
+    <div onClick={handleClick}>Worker Name {setWorkerName} </div>
     <div>Rating {setRating}</div>
     <div>Discription {setDiscription}</div>
     <div>Avillability {setAvillability}</div>
@@ -22,4 +22,4 @@ const EachWorker = ({
     <div>Call {setCall}</div>
   </div>
 );
-export default EachWorker;
+export default Worker;

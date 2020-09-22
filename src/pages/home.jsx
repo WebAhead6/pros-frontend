@@ -2,16 +2,23 @@ import React from "react";
 import Profission from "./component/Profission";
 import "./home.css";
 import { getData, API_BASE } from "../utils/data_helpers";
+import { useHistory } from "react-router-dom";
 
 const Home = function () {
   const [professions, setProfessions] = React.useState([{ name: "Electric" }]);
-  React.useEffect(() => {
-    const url = `${API_BASE}`;
-    getData(url).then((data) => setProfessions(data));
-  }, []);
-  if (!professions) {
-    return <h3>...Loading</h3>;
-  }
+  const history = useHistory();
+  const handleClick = () => {
+    // "/workers/profession/:name" to replace later **
+    history.push("/workerList");
+  };
+  // **** CONNECTION WITH BACKEND ****//
+  // React.useEffect(() => {
+  //   const url = `${API_BASE}`;
+  //   getData(url).then((data) => setProfessions(data));
+  // }, []);
+  // if (!professions) {
+  //   return <h3>...Loading</h3>;
+  // }
 
   return (
     <div className="beyondTitle">
@@ -30,13 +37,15 @@ const Home = function () {
           className="searchProfessional"
         />
         {professions.map((profession) => (
-          <Profission profession={profession} />
+          <Profission profession={profession} handleClick={handleClick} />
         ))}
-        <Profission />
-        <Profission />
-        <Profission />
-        <Profission />
-        <Profission />
+        {/* DELETE AFTER CONNECTING TO BACKEND */}
+        <Profission handleClick={handleClick} />
+        <Profission handleClick={handleClick} />
+        <Profission handleClick={handleClick} />
+        <Profission handleClick={handleClick} />
+        <Profission handleClick={handleClick} />
+        <br />
       </div>
     </div>
   );
