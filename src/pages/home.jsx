@@ -21,15 +21,15 @@ const Home = function () {
   // }
 
   return (
-    <div className="beyondTitle">
+    <div className="allH">
       <h1 className="title">home/Professions</h1>
-      <div>
-        <button className="News">News</button>
-        <button className="Reviews">Reviews</button>
-        <button className="trustedWorkers">Trusted Workers</button>
-        <br />
-        <br />
-
+      <div className="beyondTitle">
+        <div className="pagesH">
+          <button className="NewsH">News</button>
+          <button className="ReviewsH">Reviews</button>
+          <button className="trustedWorkersH">Trusted Workers</button>
+        </div>
+    
         <input
           type="search"
           name=""

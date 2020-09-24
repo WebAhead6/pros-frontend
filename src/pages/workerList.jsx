@@ -13,9 +13,12 @@ const WorkerList = function () {
     <div className="list">
       <h1 className="professionTitle">workerList"{}"</h1>
       <span></span>
-      <button className="rating">Rating</button>
-      <button className="location">Location</button>
-      <button className="trustedWorkers">Trusted Workers</button>
+      <div className="WOLI">
+      <div className="pages">
+        <button className="rating">Rating</button>
+        <button className="location">Location</button>
+        <button className="trustedWorkers">Trusted Workers</button>
+      </div>
       <div>
         {workers.map((worker) => (
           <Worker worker={worker} handleClick={handleClick} />
@@ -23,8 +26,8 @@ const WorkerList = function () {
       </div>
       <Worker handleClick={handleClick} />
       <Worker handleClick={handleClick} />
-      <Worker handleClick={handleClick} />
-      <button className="back">back</button>
+      {/* <Worker handleClick={handleClick} /> */}
+      <button className="back">back</button></div>
     </div>
   );
 };

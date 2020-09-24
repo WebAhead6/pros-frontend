@@ -1,31 +1,47 @@
+.allH {
+  background-color: #9d4e15;
+  height: 100vh;
+}
 .title {
   background-color: #6e3d0f;
   margin-top: 0;
   padding-top: 15px;
   padding-bottom: 15px;
   color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .beyondTitle {
   background-color: #9d4e15;
+  display: flex;
+  flex-direction: column;
+}
+.pagesH {
+  display: flex;
+  justify-content: space-around;
+  width: 15%;
+  margin: auto;
 }
 
-.News,
-.Reviews,
-.trustedWorkers {
+.NewsH,
+.ReviewsH,
+.trustedWorkersH {
   background-color: #f7a325;
   border-radius: 20px;
-  margin-left: 20px;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border: none;
 }
 
 .searchProfessional {
-  width: 50%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(233, 225, 225, 1);
+  width: 14%;
+  margin: auto;
+  margin-top: 30px;
   border-radius: 20px;
   text-align: center;
   padding: 10px;
   border: 1px solid #000000;
-  
+  margin-bottom: 30px;
 }

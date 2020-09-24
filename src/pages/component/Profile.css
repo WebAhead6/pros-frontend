@@ -1,23 +1,86 @@
+.workerProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image {
+  display: flex;
+  background-color: #f7a325;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+.Rating {
+  display: flex;
+  margin-top: 10px;
+  width: 40px;
+  height: 30px;
+  color: gold;
+  align-items: flex-end;
+  justify-content: center;
+}
 .name {
+  display: flex;
+  margin-top: 20px;
+  width: max-content;
+  height: 20px;
+  font-style: italic;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 18px;
+}
+.discription {
+  margin-top: 20px;
+  width: 190px;
+  height: max-content;
+  align-content: center;
+  align-items: stretch;
+}
+.moreInfo {
+  display: flex;
+  width: 350px;
+  justify-content: space-around;
   margin-top: 20px;
 }
+
 .reviews {
-  background-color: white;
-  padding: 15px;
-  margin-left: 50px;
-  margin-right: 50px;
+  background: #fffdfd;
+  box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.25);
+  margin-top: 20px;
+  width: 450px;
+}
+
+.lastLine {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  width: 450px;
 }
 
 .call {
-  background-color: green;
-  border-radius: 20px;
-  padding: 10px;
-  width: 150px;
-  margin: auto;
+  display: flex;
+  background-color: rgba(2, 121, 28, 0.67);
+  border-radius: 33px;
+  height: 40px;
+  width: 350px;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
-/* background-color: #f7a325;
-border-radius: 20px;
-margin-left: 20px;
-padding: 10px 20px;
-border: none; */
+.back2 {
+  display: flex;
+  background-color: #f7a325;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  color: white;
+}

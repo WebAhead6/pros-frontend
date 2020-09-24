@@ -9,7 +9,6 @@ const WProfile = function () {
       <h1 className="title">workerProfile</h1>
       <span></span>
       <Profile />
-      <button className="back">back</button>
     </div>
   );
 };

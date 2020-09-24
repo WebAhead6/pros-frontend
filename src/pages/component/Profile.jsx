@@ -10,17 +10,46 @@ const WorkerProfile = ({
   setCall,
   setReviews,
 }) => (
-  <div>
+  <div className="workerProfile">
     <span></span>
-    ProfilePic
-    <img className="profissionIcon" src={profPic} />
-    <div className="name">Worker Name {setWorkerName} </div>
-    <div className="Rating">Rating {setRating}</div>
-    <div className="discription">Discription {setDiscription}</div>
-    <div className="avillability">Avillability {setAvillability}</div>
-    <div className="workArea">Work Area {setWorkArea}</div>
-    <div className="reviews">Reviews {setReviews}</div>
-    <div className="call">Call {setCall}</div>
+    <div className="image">
+      {" "}
+      <h5>image</h5>
+      <img className="profissionIcon" src={profPic} />
+    </div>
+    <div className="Rating">
+      <h5>7.2 ♥</h5> {setRating}
+    </div>
+    <div className="name">
+      <h5>Worker Name</h5> {setWorkerName}{" "}
+    </div>
+    <div className="discription">
+      <h5>
+        “Fixing AC’s for 10 years. Degree from Ort Braude as AC Technician.”
+      </h5>{" "}
+      {setDiscription}
+    </div>
+    <div className="moreInfo">
+      <div className="avillability">
+        <h5>Avillability </h5>
+        {setAvillability}
+      </div>
+      <div className="workArea">
+        <h5>Work Area</h5> {setWorkArea}
+      </div>
+    </div>
+    <div className="reviews">
+      <h5>Reviews</h5> {setReviews}
+    </div>
+    <div className="lastLine">
+      <div className="call">
+        <h5>Call</h5>
+        {setCall}
+      </div>
+      <button className="back2">
+        <h5>back</h5>
+      </button>
+    </div>
   </div>
 );
 export default WorkerProfile;

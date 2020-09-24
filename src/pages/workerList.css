@@ -1,3 +1,7 @@
+.list {
+  background-color: #9d4e15;
+  height: 100vh;
+}
 .professionTitle {
   background-color: #6e3d0f;
   margin-top: 0;
@@ -6,9 +10,16 @@
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+.WOLI {
+  display: flex;
+  flex-direction: column;
+}
 
-.list {
-  background-color: #9d4e15;
+.pages {
+  display: flex;
+  justify-content: space-around;
+  width: 15%;
+  margin: auto;
 }
 
 .rating,
@@ -16,12 +27,19 @@
 .trustedWorkers {
   background-color: #f7a325;
   border-radius: 20px;
-  margin-left: 20px;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border: none;
 }
 
 .back {
   background-color: #f7a325;
-  margin-left: -400px;
+  display: flex;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  justify-content: flex-start;
+  align-items: center;
+  border: none;
+  color: white;
+  margin: auto;
 }

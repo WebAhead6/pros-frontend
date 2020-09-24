@@ -1,10 +1,18 @@
 .profission {
   display: flex;
-  justify-content: center;
-  padding: 12px 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
   border: none;
-  width: 250px;
+  width: 15%;
   margin: auto;
   margin-top: 10px;
   background-color: white;
+}
+.imgP {
+  height: 100%;
+  display: flex;
+}
+.nameP {
+  display: flex;
 }
