@@ -6,7 +6,7 @@
   width: 15%;
   margin: auto;
   margin-top: 30px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 .firstColW {
   display: flex;
@@ -62,7 +62,7 @@
 .lastRowW {
   display: flex;
   justify-content: space-between;
-  width: 180px;
+  width: 160px;
 }
 
 .callW {
