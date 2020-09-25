@@ -3,12 +3,18 @@
   display: flex;
   /* justify-content: space-around; */
   height: 80px;
-  /* width: 15%; */
-  margin: auto;
+  /* make the width to be 80% of the screen width */
+  width: 80vw;
+  /* a different way to do this margin  */
+  /* margin: auto;
   margin-top: 30px;
-  margin-bottom: -15px;
+  margin-bottom: -15px; */
+  margin: 30px auto -15px auto;
   /* margin-bottom: 10px; */
+  /* I thought it looked better with a little bit of border-radius */
+  border-radius: 5px;
 }
+
 .firstColW {
   display: flex;
   flex-direction: column;
@@ -18,6 +24,7 @@
   padding-right: 15px;
   padding-left: -100px;
 }
+
 .picW {
   display: flex;
   margin-top: 10px;
@@ -29,6 +36,7 @@
   border-radius: 50%;
   font-size: smaller;
 }
+
 .ratingW {
   /* background-color: green; */
   /* margin-top: 5px; */
@@ -51,10 +59,12 @@
   margin-bottom: 15px;
   font-size: small;
 }
+
 .nameW {
   width: fit-content;
   height: 20px;
 }
+
 .disciprtionW {
   width: fit-content;
   height: 20px;

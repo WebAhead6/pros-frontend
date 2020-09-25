@@ -1,7 +1,7 @@
 //**** WHEN CONNECTION WITH BACKEND **** //
 
 // import { accessToken } from "../../token";
-export const API_BASE = "https://localhost:4000/";
+export const API_BASE = "http://localhost:4000";
 
 const checkResponse = (response) => {
   if (response.status !== 200) {

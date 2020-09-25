@@ -1,9 +1,18 @@
 .allH {
   background-color: #9d4e15;
-  /* height: 100vh; */
-  width: max-content;
+
+  height: 100vh;
+
+  /* max-content is a good propery but we want to take the full width of the phone */
+  /* width: max-content; */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   margin: auto;
 }
+
 .title {
   background-color: #6e3d0f;
   margin-top: 0;
@@ -11,15 +20,18 @@
   padding-bottom: 15px;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  width: 350px;
+  /* 100% mobile view */
+  width: 100%;
 }
 
 .beyondTitle {
   background-color: #9d4e15;
   display: flex;
   flex-direction: column;
-  width: 350px;
+  /* 100% mobile view */
+  width: 100%;
 }
+
 .pagesH {
   display: flex;
   justify-content: space-around;
@@ -34,23 +46,48 @@
   border-radius: 20px;
   padding: 10px 15px;
   border: none;
+  /* min-width will make all the buttons start from atleast 20vw which is 
+  20% of the screen width  */
+  min-width: 20vw;
 }
+
 .NewsH {
-  padding-right: 30px;
+  /* no need for padding right here cause we added min-width in the previous class,
+  also if you check in the home.jsx file line 29 i made the bigger button be in the middle
+  for it to look better on the screen */
+  /* padding-right: 30px; */
   text-align: center;
+}
+
+/* position relative here important, cause without it the icon would be somewhere totally
+different on the page */
+.icon-input-wrapper {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  max-width: 20px;
 }
 
 .searchProfessional {
   display: flex;
   justify-content: center;
   background-color: rgba(233, 225, 225, 1);
-  width: 80%;
-  margin: auto;
-  margin-top: 30px;
+  /* made the width of the input the same width of the parent div */
+  width: 100%;
   border-radius: 20px;
   text-align: center;
   padding: 10px;
   border: 1px solid #000000;
   margin-bottom: 30px;
   font-size: smaller;
+  /* when you click on an input you see a small orange border around it
+  this css outline: none; removes it*/
+  outline: none;
 }
