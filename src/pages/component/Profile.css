@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
 }
 .image {
   display: flex;
@@ -49,7 +50,7 @@
   background: #fffdfd;
   box-shadow: 0px 1px 8px 2px rgba(0, 0, 0, 0.25);
   margin-top: 20px;
-  width: 450px;
+  width: 350px;
 }
 
 .lastLine {
@@ -59,7 +60,7 @@
   align-items: center;
   margin-top: 20px;
   margin-bottom: 10px;
-  width: 450px;
+  width: 300px;
 }
 
 .call {
@@ -67,7 +68,7 @@
   background-color: rgba(2, 121, 28, 0.67);
   border-radius: 33px;
   height: 40px;
-  width: 350px;
+  width: 250px;
   justify-content: center;
   align-items: center;
   color: white;

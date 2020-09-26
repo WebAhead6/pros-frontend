@@ -12,24 +12,24 @@ const Home = function () {
     history.push("/workerList");
   };
   // **** CONNECTION WITH BACKEND ****//
-  // React.useEffect(() => {
-  //   const url = `${API_BASE}`;
-  //   getData(url).then((data) => setProfessions(data));
-  // }, []);
-  // if (!professions) {
-  //   return <h3>...Loading</h3>;
-  // }
+  React.useEffect(() => {
+    const url = `${API_BASE}/professions`;
+    getData(url).then((data) => setProfessions(data));
+  }, []);
+  if (!professions) {
+    return <h3>...Loading</h3>;
+  }
 
   return (
     <div className="allH">
       <h1 className="title">home/Professions</h1>
       <div className="beyondTitle">
         <div className="pagesH">
-          <button className="NewsH">News</button>
+          <button className="NewsH"> News</button>
           <button className="ReviewsH">Reviews</button>
           <button className="trustedWorkersH">Trusted Workers</button>
         </div>
-    
+
         <input
           type="search"
           name=""

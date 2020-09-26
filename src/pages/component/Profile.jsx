@@ -15,7 +15,7 @@ const WorkerProfile = ({
     <div className="image">
       {" "}
       <h5>image</h5>
-      <img className="profissionIcon" src={profPic} />
+      <img className="profissionIcon" src="/logo192.png" />
     </div>
     <div className="Rating">
       <h5>7.2 ♥</h5> {setRating}

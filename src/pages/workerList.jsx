@@ -14,20 +14,35 @@ const WorkerList = function () {
       <h1 className="professionTitle">workerList"{}"</h1>
       <span></span>
       <div className="WOLI">
-      <div className="pages">
-        <button className="rating">Rating</button>
-        <button className="location">Location</button>
-        <button className="trustedWorkers">Trusted Workers</button>
+        <div className="pages">
+          <button className="rating">Rating</button>
+          <button className="location">Location</button>
+          <button className="trustedWorkers">Trusted Workers</button>
+        </div>
+        <div>
+          {workers.map((worker) => (
+            <Worker worker={worker} handleClick={handleClick} />
+          ))}
+        </div>
+        <div>
+          {workers.map((worker) => (
+            <Worker worker={worker} handleClick={handleClick} />
+          ))}
+        </div>
+        <div>
+          {workers.map((worker) => (
+            <Worker worker={worker} handleClick={handleClick} />
+          ))}
+        </div>
+        <div>
+          {workers.map((worker) => (
+            <Worker worker={worker} handleClick={handleClick} />
+          ))}
+        </div>
+        {/* <Worker handleClick={handleClick} /> */}
+
+        <button className="back">back</button>
       </div>
-      <div>
-        {workers.map((worker) => (
-          <Worker worker={worker} handleClick={handleClick} />
-        ))}
-      </div>
-      <Worker handleClick={handleClick} />
-      <Worker handleClick={handleClick} />
-      {/* <Worker handleClick={handleClick} /> */}
-      <button className="back">back</button></div>
     </div>
   );
 };
