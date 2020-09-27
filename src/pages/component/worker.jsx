@@ -14,26 +14,26 @@ const Worker = ({
     <span></span>
     <div className="firstColW">
       <div className="picW">
-        <h5>ProfilePic</h5>
+        <h5>{profPic}</h5>
         <img className="profissionIcon" src={profPic} />
       </div>
       <div className="ratingW">
-        <h5>7.2♥</h5> {setRating}
+        <h5>{setRating}</h5>
       </div>
     </div>
     <div className="secColW">
       <div className="nameW">
-        <h5>Worker Name</h5> {setWorkerName}{" "}
+        <h5>{setWorkerName}</h5>{" "}
       </div>
       <div className="disciprtionW">
-        <h5>Discription</h5> {setDiscription}
+        <h5>{setDiscription}</h5>
       </div>
       <div className="lastRowW">
         <div className="avillabilityW">
-          <h5>Avillability</h5> {setAvillability}
+          <h5>{setAvillability}</h5>
         </div>
         <div className="workAreaW">
-          <h5>Work Area</h5> {setWorkArea}
+          <h5>{setWorkArea}</h5>
         </div>
       </div>
     </div>

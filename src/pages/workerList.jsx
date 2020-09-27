@@ -1,5 +1,6 @@
 import React from "react";
 import Worker from "./component/worker";
+import { getData } from "../utils/data_helpers";
 import "./workerList.css";
 import { useHistory } from "react-router-dom";
 
@@ -9,6 +10,13 @@ const WorkerList = function () {
   const handleClick = () => {
     history.push("/profile");
   };
+  React.useEffect(() => {
+    const url = `/workers`;
+    getData(url).then(({ data }) => setWorkers(data));
+  }, []);
+  if (!workers) {
+    return <h3>...Loading</h3>;
+  }
   return (
     <div className="list">
       <h1 className="professionTitle">Workers</h1>
@@ -22,7 +30,16 @@ const WorkerList = function () {
         </div>
         <div>
           {workers.map((worker) => (
-            <Worker worker={worker} handleClick={handleClick} />
+            <Worker
+              profPic={worker.picture}
+              setRating={worker.rating}
+              setWorkerName={worker.fullname}
+              setDiscription={worker.description}
+              setAvillability={worker.avilability}
+              setWorkArea={worker.location}
+              setCall={worker.phone}
+              handleClick={handleClick}
+            />
           ))}
         </div>
         {/* <Worker handleClick={handleClick} /> */}

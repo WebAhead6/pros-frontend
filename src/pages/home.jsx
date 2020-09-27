@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 
 const Home = function () {
   const [professions, setProfessions] = React.useState([{ name: "Electric" }]);
+
   const history = useHistory();
   const handleClick = () => {
     // "/workers/profession/:name" to replace later **
@@ -42,7 +43,11 @@ const Home = function () {
           />
         </div>
         {professions.map((profession) => (
-          <Profission profession={profession} handleClick={handleClick} />
+          <Profission
+            setProfissionName={profession.name}
+            profIcon={profession.icon}
+            handleClick={handleClick}
+          />
         ))}
         {/* DELETE AFTER CONNECTING TO BACKEND */}
         <Profission handleClick={handleClick} />
