@@ -13,8 +13,8 @@ const Home = function () {
   };
   // **** CONNECTION WITH BACKEND ****//
   React.useEffect(() => {
-    const url = `${API_BASE}/professions`;
-    getData(url).then((data) => setProfessions(data));
+    const url = `/professions`;
+    getData(url).then(({ data }) => setProfessions(data));
   }, []);
   if (!professions) {
     return <h3>...Loading</h3>;

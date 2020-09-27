@@ -3,7 +3,7 @@ import Profile from "./component/Profile";
 import "./workerProfile.css";
 
 const WProfile = function () {
-  const [workers, setWorkers] = React.useState([{ name: "Mervat" }]);
+  // const [workers, setWorkers] = React.useState([{ name: "Mervat" }]);
   return (
     <div className="beyondTitle">
       <h1 className="title">Worker' Name</h1>
