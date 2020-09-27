@@ -6,7 +6,7 @@ const WProfile = function () {
   const [workers, setWorkers] = React.useState([{ name: "Mervat" }]);
   return (
     <div className="beyondTitle">
-      <h1 className="title">workerProfile</h1>
+      <h1 className="title">Worker' Name</h1>
       <span></span>
       <Profile />
     </div>

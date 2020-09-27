@@ -11,28 +11,14 @@ const WorkerList = function () {
   };
   return (
     <div className="list">
-      <h1 className="professionTitle">workerList"{}"</h1>
+      <h1 className="professionTitle">Workers</h1>
       <span></span>
       <div className="WOLI">
         <div className="pages">
           <button className="rating">Rating</button>
-          <button className="location">Location</button>
+          {/* changed the place of the bigger button just like the home page */}
           <button className="trustedWorkers">Trusted Workers</button>
-        </div>
-        <div>
-          {workers.map((worker) => (
-            <Worker worker={worker} handleClick={handleClick} />
-          ))}
-        </div>
-        <div>
-          {workers.map((worker) => (
-            <Worker worker={worker} handleClick={handleClick} />
-          ))}
-        </div>
-        <div>
-          {workers.map((worker) => (
-            <Worker worker={worker} handleClick={handleClick} />
-          ))}
+          <button className="location">Location</button>
         </div>
         <div>
           {workers.map((worker) => (
@@ -41,7 +27,7 @@ const WorkerList = function () {
         </div>
         {/* <Worker handleClick={handleClick} /> */}
 
-        <button className="back">back</button>
+        <button className="back">Back</button>
       </div>
     </div>
   );

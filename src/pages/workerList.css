@@ -1,9 +1,11 @@
 .list {
   background-color: #9d4e15;
-  /* height: 100vh; */
-  width: 350px;
+  height: 100vh;
+  /* fit for mobile view */
+  /* width: 350px; */
   margin: auto;
 }
+
 .professionTitle {
   background-color: #6e3d0f;
   margin-top: 0;
@@ -12,6 +14,7 @@
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
 .WOLI {
   display: flex;
   flex-direction: column;
@@ -22,7 +25,6 @@
   justify-content: space-around;
   width: 90%;
   margin: auto;
-  margin-top: -10px;
 }
 
 .rating,
@@ -32,20 +34,27 @@
   border-radius: 20px;
   padding: 10px 15px;
   border: none;
+  /* min-width will make all the buttons start from atleast 20vw which is 
+  20% of the screen width  */
+  min-width: 20vw;
 }
 
 .back {
   background-color: #f7a325;
   display: flex;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
+  height: 50px;
+  width: 100px;
+  border-radius: 5px;
   justify-content: center;
   align-items: center;
   border: none;
   color: white;
-  margin: auto;
+  /* instead of adding the margin this way */
+  /* margin: auto;
   margin-top: 30px;
   margin-left: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 5px; */
+  /* you could do it like this */
+  margin: 40px auto 5px 20px;
+  font-size: 20px;
 }
