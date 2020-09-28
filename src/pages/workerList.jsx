@@ -1,11 +1,23 @@
 import React from "react";
 import Worker from "./component/worker";
+import Profission from "./component/Profission";
 import { getData } from "../utils/data_helpers";
 import "./workerList.css";
 import { useHistory } from "react-router-dom";
 
 const WorkerList = function () {
   const [workers, setWorkers] = React.useState([{ name: "Mervat" }]);
+
+  // const {
+  //   picture,
+  //   rating,
+  //   fullname,
+  //   description,
+  //   avilability,
+  //   location,
+  //   phone,
+  //   professionName,
+  // } = workers;
   const history = useHistory();
   const handleClick = () => {
     history.push("/profile");
@@ -13,7 +25,7 @@ const WorkerList = function () {
   React.useEffect(() => {
     const url = `/workers`;
     getData(url).then(({ data }) => setWorkers(data));
-  }, []);
+  });
   if (!workers) {
     return <h3>...Loading</h3>;
   }
@@ -38,9 +50,14 @@ const WorkerList = function () {
               setAvillability={worker.avilability}
               setWorkArea={worker.location}
               setCall={worker.phone}
+              setProName={worker.professionName}
               handleClick={handleClick}
-            />
-          ))}
+              />
+               ))} 
+               
+                  (setProName ? (
+                    <Profission setProfissionName={professionName} />
+                  ) : null}
         </div>
         {/* <Worker handleClick={handleClick} /> */}
 

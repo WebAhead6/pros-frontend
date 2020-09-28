@@ -8,9 +8,10 @@ const Worker = ({
   setAvillability,
   setWorkArea,
   setCall,
+  setProName,
   handleClick,
 }) => (
-  <div className="worker" onClick={handleClick}>
+  <div className="worker" onClick={handleClick} >
     <span></span>
     <div className="firstColW">
       <div className="picW">
