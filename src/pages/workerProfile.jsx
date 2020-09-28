@@ -17,16 +17,16 @@ const WProfile = function () {
       <h1 className="title">Worker' Name</h1>
       <span></span>
 
-      {profiles.map((WorkerProfile) => (
+      {profiles.map((workerProfile) => (
         <WorkerProfile
-          profPic={WorkerProfile.picture}
-          setRating={WorkerProfile.rating}
-          setWorkerName={WorkerProfile.fullname}
-          setDiscription={WorkerProfile.description}
-          setAvillability={WorkerProfile.avilability}
-          setWorkArea={WorkerProfile.location}
-          setCall={WorkerProfile.phone}
-          setReviews={WorkerProfile.phone}
+          profPic={workerProfile.picture}
+          setRating={workerProfile.rating}
+          setWorkerName={workerProfile.fullname}
+          setDiscription={workerProfile.description}
+          setAvillability={workerProfile.avilability}
+          setWorkArea={workerProfile.location}
+          setCall={workerProfile.phone}
+          // setReviews={workerProfile.phone}
         />
       ))}
     </div>

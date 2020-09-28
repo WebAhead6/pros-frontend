@@ -1,5 +1,11 @@
 import React from "react";
 import "./Profile.css";
+// import { useHistory } from "react-router-dom";
+// let history = useHistory();
+// function onClickGoBackArrow() {
+//   history.goBack();
+// }
+
 const Profile = ({
   profPic,
   setWorkerName,
@@ -16,33 +22,28 @@ const Profile = ({
       <img className="profissionIcon" src={profPic} alt="" />
     </div>
     <div className="Rating">
-      <h5>7.2 ♥</h5> {setRating}
+      <h5>{setRating} ♥</h5>
     </div>
     <div className="name">
-      <h5>Worker Name</h5> {setWorkerName}
+      <h5>{setWorkerName}</h5>
     </div>
     <div className="discription">
-      <h5>
-        “Fixing AC’s for 10 years. Degree from Ort Braude as AC Technician.”
-      </h5>
-      {setDiscription}
+      <h5>“{setDiscription}”</h5>
     </div>
     <div className="moreInfo">
       <div className="avillability">
-        <h5>Avillability </h5>
-        {setAvillability}
+        <h5>Avillability: {setAvillability}</h5>
       </div>
       <div className="workArea">
-        <h5>Work Area</h5> {setWorkArea}
+        <h5>Work Area: {setWorkArea}</h5>
       </div>
     </div>
     <div className="reviews">
-      <h5>Reviews</h5> {setReviews}
+      <h5>{setReviews}</h5>
     </div>
     <div className="lastLine">
       <div className="call">
-        <h5>Call</h5>
-        {setCall}
+        <h5>{setCall}</h5>
       </div>
       <button className="back2">
         <h5>back</h5>

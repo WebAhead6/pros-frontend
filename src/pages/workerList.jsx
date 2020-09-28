@@ -5,8 +5,14 @@ import { getData } from "../utils/data_helpers";
 import "./workerList.css";
 import { useHistory } from "react-router-dom";
 
+// function onClickGoBackArrow() {
+//   history.goBack();
+// }
+
 const WorkerList = function () {
-  const [workers, setWorkers] = React.useState([{ name: "Mervat" }]);
+  const [workers, setWorkers] = React.useState([
+    { professionName: "Electricians" },
+  ]);
 
   // const {
   //   picture,
@@ -18,6 +24,7 @@ const WorkerList = function () {
   //   phone,
   //   professionName,
   // } = workers;
+  const { professionName } = workers;
   const history = useHistory();
   const handleClick = () => {
     history.push("/profile");
@@ -25,10 +32,11 @@ const WorkerList = function () {
   React.useEffect(() => {
     const url = `/workers`;
     getData(url).then(({ data }) => setWorkers(data));
-  });
+  }, [workers]);
   if (!workers) {
     return <h3>...Loading</h3>;
   }
+
   return (
     <div className="list">
       <h1 className="professionTitle">Workers</h1>
@@ -41,23 +49,29 @@ const WorkerList = function () {
           <button className="location">Location</button>
         </div>
         <div>
-          {workers.map((worker) => (
-            <Worker
-              profPic={worker.picture}
-              setRating={worker.rating}
-              setWorkerName={worker.fullname}
-              setDiscription={worker.description}
-              setAvillability={worker.avilability}
-              setWorkArea={worker.location}
-              setCall={worker.phone}
-              setProName={worker.professionName}
-              handleClick={handleClick}
+          <div>
+            {workers.map((worker) => (
+              <Worker
+                profPic={worker.picture}
+                setRating={worker.rating}
+                setWorkerName={worker.fullname}
+                setDiscription={worker.description}
+                setAvillability={worker.avilability}
+                setWorkArea={worker.location}
+                setCall={worker.phone}
+                setProName={worker.professionName}
+                handleClick={handleClick}
               />
-               ))} 
-               
-                  (setProName ? (
-                    <Profission setProfissionName={professionName} />
-                  ) : null}
+            ))}{" "}
+            ;
+          </div>
+          <div>
+            {/* {workers.map((worker) => (  */}
+            {professionName ? (
+              <Profission setProfissionName={professionName} />
+            ) : null}
+            {/* ))} */}
+          </div>
         </div>
         {/* <Worker handleClick={handleClick} /> */}
 
