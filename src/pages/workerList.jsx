@@ -30,9 +30,11 @@ const WorkerList = function () {
     history.push("/profile");
   };
   React.useEffect(() => {
-    const url = `/workers`;
+    const name = "movers";
+    const url = `/workers/profession/${name}`;
+    // const url = `/workers`;
     getData(url).then(({ data }) => setWorkers(data));
-  }, [workers]);
+  }, []);
   if (!workers) {
     return <h3>...Loading</h3>;
   }

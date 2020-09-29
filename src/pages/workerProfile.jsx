@@ -1,5 +1,6 @@
 import React from "react";
 import WorkerProfile from "./component/Profile";
+import Worker from "./component/worker";
 import "./workerProfile.css";
 import { getData } from "../utils/data_helpers";
 
@@ -12,6 +13,15 @@ const WProfile = function () {
   if (!profiles) {
     return <h3>...Loading</h3>;
   }
+  // const {
+  //   fullname,
+  //   picture,
+  //   rating,
+  //   description,
+  //   avilability,
+  //   location,
+  //   phone,
+  // } = profiles;
   return (
     <div className="beyondTitle">
       <h1 className="title">Worker' Name</h1>
@@ -29,6 +39,7 @@ const WProfile = function () {
           // setReviews={workerProfile.phone}
         />
       ))}
+      {/* {fullname ? <Worker setWorkerName={fullname} /> : null} */}
     </div>
   );
 };
