@@ -8,10 +8,8 @@ const Home = function () {
   const [professions, setProfessions] = React.useState([{ name: "Electric" }]);
 
   const history = useHistory();
-  const handleClick = (profession) => {
-    console.log(profession);
+  const handleClick = () => {
     // "/workers/profession/:name" to replace later **
-    localStorage.setItem("profesName2", profession);
     history.push("/workerList");
   };
   // **** CONNECTION WITH BACKEND ****//
@@ -51,7 +49,12 @@ const Home = function () {
             handleClick={handleClick}
           />
         ))}
-
+        {/* DELETE AFTER CONNECTING TO BACKEND */}
+        <Profission handleClick={handleClick} />
+        <Profission handleClick={handleClick} />
+        <Profission handleClick={handleClick} />
+        <Profission handleClick={handleClick} />
+        <Profission handleClick={handleClick} />
         <br />
       </div>
     </div>
