@@ -52,8 +52,7 @@ const WorkerList = function () {
               handleClick={handleClick}
             />
           ))}
-            ;
-          </div>
+        </div>
 
         <button className="back">Back</button>
       </div>

@@ -16,5 +16,5 @@ const Profission = ({ profIcon, setProfissionName, handleClick }) => (
     </div>
   </div>
 );
+
 export default Profission;
-//handleClick

@@ -19,7 +19,7 @@ const WProfile = function () {
   }
   return (
 
-    <div className="beyondTitle">
+    <div className="workerProfile-container">
       <h1 className="title">Worker' Name</h1>
 
       {profiles.map((workerProfile) => (
