@@ -9,16 +9,18 @@ const Home = function () {
 
   const history = useHistory();
   const handleClick = (profession) => {
-    console.log(profession);
+
     // "/workers/profession/:name" to replace later **
     localStorage.setItem("profesName2", profession);
     history.push("/workerList");
   };
-  // **** CONNECTION WITH BACKEND ****//
+
   React.useEffect(() => {
     const url = `/professions`;
+
     getData(url).then(({ data }) => setProfessions(data));
   }, []);
+
   if (!professions) {
     return <h3>...Loading</h3>;
   }
