@@ -7,7 +7,9 @@ import { getData } from "../utils/data_helpers";
 const WProfile = function () {
   const [profiles, setProfiles] = React.useState([{ name: "Mervat" }]);
   React.useEffect(() => {
-    const url = `/workers`;
+    const name = localStorage.getItem("WorkerName2");
+    console.log(name, "local storage name");
+    const url = `/workers/${name}`;
     getData(url).then(({ data }) => setProfiles(data));
   }, []);
   if (!profiles) {

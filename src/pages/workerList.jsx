@@ -26,7 +26,8 @@ const WorkerList = function () {
   // } = workers;
   // const { professionName } = workers;
   const history = useHistory();
-  const handleClick = () => {
+  const handleClick = (workerName) => {
+    localStorage.setItem("WorkerName2", workerName);
     history.push("/profile");
   };
   React.useEffect(() => {
