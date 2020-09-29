@@ -1,5 +1,7 @@
 import React from "react";
 import "./Profile.css";
+import { Link } from "react-router-dom";
+
 // import { useHistory } from "react-router-dom";
 // let history = useHistory();
 // function onClickGoBackArrow() {
@@ -45,9 +47,12 @@ const Profile = ({
       <div className="call">
         <h5>{setCall}</h5>
       </div>
-      <button className="back2">
-        <h5>back</h5>
-      </button>
+      <Link to="/workerList">
+        {" "}
+        <button className="back2">
+          <h5>back</h5>
+        </button>{" "}
+      </Link>
     </div>
   </div>
 );

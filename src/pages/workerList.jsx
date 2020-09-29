@@ -4,6 +4,7 @@ import Profission from "./component/Profission";
 import { getData } from "../utils/data_helpers";
 import "./workerList.css";
 import { useHistory } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 // function onClickGoBackArrow() {
 //   history.goBack();
@@ -78,8 +79,10 @@ const WorkerList = function () {
           </div>
         </div>
         {/* <Worker handleClick={handleClick} /> */}
-
-        <button className="back">Back</button>
+<Link to="/">
+        <button className="back">
+          Back</button>
+          </Link>
       </div>
     </div>
   );
