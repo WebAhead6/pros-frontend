@@ -24,13 +24,14 @@ const WorkerList = function () {
   //   phone,
   //   professionName,
   // } = workers;
-  const { professionName } = workers;
+  // const { professionName } = workers;
   const history = useHistory();
   const handleClick = () => {
     history.push("/profile");
   };
   React.useEffect(() => {
-    const name = "movers";
+    const name = localStorage.getItem("profesName2");
+    console.log(name, "local storage name");
     const url = `/workers/profession/${name}`;
     // const url = `/workers`;
     getData(url).then(({ data }) => setWorkers(data));
@@ -69,9 +70,9 @@ const WorkerList = function () {
           </div>
           <div>
             {/* {workers.map((worker) => (  */}
-            {professionName ? (
+            {/* {professionName ? (
               <Profission setProfissionName={professionName} />
-            ) : null}
+            ) : null} */}
             {/* ))} */}
           </div>
         </div>
