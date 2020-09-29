@@ -2,7 +2,7 @@ import React from "react";
 import "./Profission.css";
 
 const Profission = ({ profIcon, setProfissionName, handleClick }) => (
-  <div className="profission" onClick={handleClick}>
+  <div className="profission" onClick={() => handleClick(setProfissionName)}>
     <div className="imgP">
       <h4>{profIcon}</h4>
       <img className="profissionIcon" src={profIcon} alt="" />

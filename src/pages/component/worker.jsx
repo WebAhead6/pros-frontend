@@ -11,7 +11,7 @@ const Worker = ({
   setProName,
   handleClick,
 }) => (
-  <div className="worker" onClick={handleClick} >
+  <div className="worker" onClick={() => handleClick(setWorkerName)}>
     <span></span>
     <div className="firstColW">
       <div className="picW">
