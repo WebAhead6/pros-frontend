@@ -4,6 +4,7 @@ import loginpic from "../login/logini.png";
 import {Link} from "react-router-dom";
 
 export function Register() {
+  const [worker, setWorker] = React.useState(false);
   const {register, handleSubmit, errors} = useForm();
 
   const onSubmit = (data) => console.log(data);
@@ -25,6 +26,7 @@ export function Register() {
               name="firstname"
               ref={register({required: true, maxLength: 80})}
             />
+            {errors.firstname && "first name is required."}
           </div>
           <div className="form-group">
             <label htmlFor="lastname">Last Name</label>
@@ -34,6 +36,7 @@ export function Register() {
               name="lastname"
               ref={register({required: true, maxLength: 100})}
             />
+            {errors.lastname && "Last name is required."}
           </div>
           <div className="form-group">
             <label htmlFor="email">Email</label>
@@ -43,6 +46,7 @@ export function Register() {
               name="email"
               ref={register({required: true, pattern: /^\S+@\S+$/i})}
             />
+            {errors.email && "email not valid"}
           </div>
           <div className="form-group">
             <label htmlFor="mobile">Mobile number</label>
@@ -52,6 +56,7 @@ export function Register() {
               name="mobile"
               ref={register({required: true, minLength: 6, maxLength: 12})}
             />
+            {errors.mobile && "mobile number is required."}
           </div>
           <div className="form-group radio">
             <label>Worker?</label>
@@ -62,8 +67,9 @@ export function Register() {
                 type="radio"
                 value="yes"
                 ref={register({required: true})}
+                onChange={() => setWorker(true)}
               />
-              Yes
+              <span>Yes</span>
             </label>
 
             <label htmlFor="worker">
@@ -73,23 +79,24 @@ export function Register() {
                 type="radio"
                 value="no"
                 ref={register({required: true})}
+                onChange={() => setWorker(false)}
               />
-              No
+              <span>No</span>
             </label>
           </div>
-
-          <div className="form-group">
-            <label htmlFor="title">Title</label>
-            <select name="title" ref={register({required: true})}>
-              <option value="electrician">Electrician</option>
-              <option value="mechanic">Mechanic</option>
-              <option value="engineer">Engineer</option>
-              <option value="plumber">Plumber</option>
-              <option value="painter">Painter</option>
-              <option value="designer">Designer</option>
-            </select>
-          </div>
-
+          {worker && (
+            <div className="form-group workerForm">
+              <label htmlFor="title">Title</label>
+              <select name="title" ref={register({required: true})}>
+                <option value="electrician">Electrician</option>
+                <option value="mechanic">Mechanic</option>
+                <option value="engineer">Engineer</option>
+                <option value="plumber">Plumber</option>
+                <option value="painter">Painter</option>
+                <option value="designer">Designer</option>
+              </select>
+            </div>
+          )}
           <div className="form-group">
             <label htmlFor="password">Password</label>
             <input
@@ -98,6 +105,8 @@ export function Register() {
               name="password"
               ref={register({required: true, minLength: 8})}
             />
+            {errors.password &&
+              "password is required. must be at least 8 chars long"}
           </div>
 
           <button type="submit" className="btn">
