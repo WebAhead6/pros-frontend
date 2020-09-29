@@ -1,10 +1,12 @@
 import React from "react";
 import Worker from "./component/worker";
+import LocationFilter from "./component/LocationFilter";
+
 import Profission from "./component/Profission";
 import { getData } from "../utils/data_helpers";
 import "./workerList.css";
 import { useHistory } from "react-router-dom";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // function onClickGoBackArrow() {
 //   history.goBack();
@@ -14,7 +16,7 @@ const WorkerList = function () {
   const [workers, setWorkers] = React.useState([
     { professionName: "Electricians" },
   ]);
-
+  const [locFilter, setLocFilter] = React.useState("all");
   // const {
   //   picture,
   //   rating,
@@ -79,10 +81,9 @@ const WorkerList = function () {
           </div>
         </div>
         {/* <Worker handleClick={handleClick} /> */}
-<Link to="/">
-        <button className="back">
-          Back</button>
-          </Link>
+        <Link to="/">
+          <button className="back">Back</button>
+        </Link>
       </div>
     </div>
   );
