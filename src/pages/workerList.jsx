@@ -1,15 +1,19 @@
 import React from "react";
 import Worker from "./component/worker";
+import LocationFilter from "./component/LocationFilter";
+
 import Profission from "./component/Profission";
 import {getData} from "../utils/data_helpers";
 import "./workerList.css";
-import {useHistory} from "react-router-dom";
+
+import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
+
 
 const WorkerList = function () {
   const [workers, setWorkers] = React.useState([
     {professionName: "Electricians"},
   ]);
-
   const history = useHistory();
 
   const handleClick = (workerName) => {
