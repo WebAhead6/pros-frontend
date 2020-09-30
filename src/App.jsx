@@ -5,7 +5,7 @@ import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import WProfile from "./pages/workerProfile";
 import WorkerList from "./pages/workerList";
 import Home from "./pages/home";
-import {Login, Register} from "./login/Index";
+import {Login, Register} from "./pages/login/loginIndex";
 import Category from "./pages/AdminPanel/Category";
 import seedWorkers from "./pages/AdminPanel/seedWorkers";
 import WorkerDetails from "./pages/AdminPanel/WorkerDetails";

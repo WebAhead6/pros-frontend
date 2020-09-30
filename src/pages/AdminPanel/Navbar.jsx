@@ -28,12 +28,9 @@ export class Navbar extends Component {
         </div>
 
         <div className="select-container">
-          <div className="category-title">{this.props.url}</div>
-          {/* <Select>
-            <MenuItem value="1">1 - </MenuItem>
-            <MenuItem value="2">2 - </MenuItem>
-            <MenuItem value="3">3 - </MenuItem>
-          </Select> */}
+          {this.props.url && (
+            <div className="category-title">{this.props.url}</div>
+          )}
         </div>
       </header>
     );
