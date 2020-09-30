@@ -55,7 +55,7 @@ class WorkerDetails extends Component {
             <img className="card-img-top" src={worker.image} alt="" />
             <div className="card-body">
               <h2 className="card-title">{worker.name}</h2>
-              <h3 className="card-subtitle text-muted">NUMBER</h3>
+              <h3 className="card-subtitle text-muted">057-85472596</h3>
               <h5 className="card-subtitle text-muted">
                 <Rater
                   className="worker-stars"

@@ -65,11 +65,15 @@ class App extends React.Component {
               render={this.getWorker}
             />
 
-            <Route exact path="/login" render={(routeProps) => <Login />} />
+            <Route
+              exact
+              path="/login"
+              render={(routeProps) => <Login {...routeProps} />}
+            />
             <Route
               exact
               path="/register/"
-              render={(routeProps) => <Register />}
+              render={(routeProps) => <Register {...routeProps} />}
             />
 
             <Route exact path="/">

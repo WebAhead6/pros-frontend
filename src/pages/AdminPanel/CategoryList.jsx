@@ -7,7 +7,6 @@ import "../../App.scss";
 
 const styles = {
   root: {
-    height: "110vh",
     width: "100vw",
     display: "flex",
     flexWrap: "wrap",
