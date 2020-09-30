@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, {Component} from "react";
+import {Link} from "react-router-dom";
 import "./WorkerDetails.css";
 import Rater from "react-rater";
 import "react-rater/lib/react-rater.css";
@@ -8,7 +8,7 @@ import "../../App.scss";
 
 class WorkerDetails extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       stars: 4,
       workerReviews: this.props.worker.reviews,
@@ -23,11 +23,11 @@ class WorkerDetails extends Component {
   }
 
   changeStars(newRating) {
-    this.setState({ stars: newRating.rating });
+    this.setState({stars: newRating.rating});
   }
 
   toggleForm() {
-    this.setState({ expand: !this.state.expand, review: "" });
+    this.setState({expand: !this.state.expand, review: ""});
   }
 
   handleReviewChange(e) {
@@ -46,7 +46,7 @@ class WorkerDetails extends Component {
   }
 
   render() {
-    let { worker } = this.props;
+    let {worker} = this.props;
 
     return (
       <div className="WorkerDetails row justify-content-center mt-5">
@@ -109,14 +109,14 @@ class WorkerDetails extends Component {
                   </form>
                 </div>
               ) : (
-                  <button
-                    type="button"
-                    className="btn btn-info"
-                    onClick={this.toggleForm}
-                  >
-                    Add Review
-                  </button>
-                )}
+                <button
+                  type="button"
+                  className="btn btn-info"
+                  onClick={this.toggleForm}
+                >
+                  Add Review
+                </button>
+              )}
               <Link
                 to={`/categories/${this.props.match.params.id}`}
                 type="button"

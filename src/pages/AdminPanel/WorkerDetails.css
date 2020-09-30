@@ -49,10 +49,14 @@ ul {
 
 .worker-stars {
   padding-top: 0.5em;
+  color: yellow;
   display: flex;
   justify-content: center;
   transform: scale(2);
   padding-bottom: 1em;
+}
+.react-rater-star.is-active {
+  color: rgb(255, 81, 0) !important;
 }
 
 .reviewForm {

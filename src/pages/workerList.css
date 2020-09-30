@@ -11,8 +11,11 @@
   padding-bottom: 10px;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #9d4e15;
-
+  background: linear-gradient(
+    100deg,
+    rgba(0, 115, 186, 0.907) 30%,
+    #16fff7 120%
+  );
 }
 
 .WOLI {
@@ -30,7 +33,8 @@
 .rating,
 .location,
 .trustedWorkers {
-  background-color: #f7a325;
+  background-color: #3dc8ff;
+
   border-radius: 20px;
   padding: 10px 15px;
   border: none;
@@ -40,7 +44,7 @@
 }
 
 .back {
-  background-color: #f7a325;
+  background-color: #3dc8ff;
   display: flex;
   height: 50px;
   width: 100px;

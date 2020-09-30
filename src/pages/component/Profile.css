@@ -17,13 +17,12 @@ h5 {
 }
 
 .beyondTitle {
-  background-color: #9d4e15;
-
+  background-color: #3dc8ff;
 }
 
 .image {
   display: flex;
-  background-color: #f7a325;
+  background-color: #3dc8ff;
   /* make the profile pic a little bigger */
   height: 120px;
   width: 120px;
@@ -46,7 +45,7 @@ h5 {
   margin-top: 10px;
   font-style: italic;
   font-size: 28px;
-  color: #6e3d0f;
+  color: #0f586e;
 }
 
 .discription {
@@ -63,7 +62,7 @@ h5 {
   width: 75vw;
   justify-content: space-around;
   margin-top: auto;
-  color: #6e3d0f;
+  color: #0f7e8d;
 }
 
 .reviews {
@@ -85,7 +84,7 @@ h5 {
 
 .call {
   display: flex;
-  background-color: rgba(2, 121, 28, 0.67);
+  background-color: rgba(3, 175, 40, 0.67);
   border-radius: 5px;
   height: 50px;
   width: 75%;
@@ -95,7 +94,7 @@ h5 {
 }
 
 .back2 {
-  background-color: #f7a325;
+  background-color: #3dc8ff;
   display: flex;
   height: 50px;
   width: 20%;
