@@ -16,6 +16,11 @@ h5 {
   height: 100%;
 }
 
+.beyondTitle {
+  background-color: #9d4e15;
+
+}
+
 .image {
   display: flex;
   background-color: #f7a325;
@@ -38,14 +43,10 @@ h5 {
 }
 
 .name {
-  /* display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  height: 20px; */
   margin-top: 10px;
   font-style: italic;
   font-size: 28px;
-  color: white;
+  color: #6e3d0f;
 }
 
 .discription {
@@ -62,7 +63,7 @@ h5 {
   width: 75vw;
   justify-content: space-around;
   margin-top: auto;
-  color: white;
+  color: #6e3d0f;
 }
 
 .reviews {

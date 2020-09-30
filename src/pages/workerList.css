@@ -1,18 +1,18 @@
 .list {
-  background-color: #9d4e15;
   height: 100vh;
-  /* fit for mobile view */
-  /* width: 350px; */
+  width: 100vw;
   margin: auto;
+  background-color: whitesmoke;
 }
 
 .professionTitle {
-  background-color: #6e3d0f;
   margin-top: 0;
   padding-top: 15px;
   padding-bottom: 10px;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #9d4e15;
+
 }
 
 .WOLI {

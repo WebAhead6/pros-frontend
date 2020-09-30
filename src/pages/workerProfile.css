@@ -1,5 +1,9 @@
-.beyondTitle {
+.workerProfile-container {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  width: 100%;
 }
 
 .title {
@@ -7,10 +11,7 @@
   margin-top: 0;
   padding-top: 15px;
   padding-bottom: 15px;
+  font-size: 30px;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.list {
-  background-color: #9d4e15;
 }

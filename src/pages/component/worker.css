@@ -1,18 +1,12 @@
 .worker {
   background-color: white;
   display: flex;
-  /* justify-content: space-around; */
   height: 80px;
-  /* make the width to be 80% of the screen width */
   width: 80vw;
-  /* a different way to do this margin  */
-  /* margin: auto;
-  margin-top: 30px;
-  margin-bottom: -15px; */
   margin: 30px auto -15px auto;
-  /* margin-bottom: 10px; */
-  /* I thought it looked better with a little bit of border-radius */
   border-radius: 5px;
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.2),
+    0 0.5rem 1.125rem rgba(75, 0, 0, 0.2);
 }
 
 .firstColW {
@@ -81,6 +75,6 @@
   width: 150px;
   justify-content: center;
   align-items: center;
-  font-size: XX-large;
+  font-size: 20px;
   margin-right: 10px;
 }
