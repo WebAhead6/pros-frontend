@@ -5,11 +5,16 @@ import {Link} from "react-router-dom";
 import Navbar from "../AdminPanel/Navbar";
 import "../AdminPanel/adminPanel.module.css";
 
-export function Register() {
+export function Register(props) {
   const [worker, setWorker] = React.useState(false);
   const {register, handleSubmit, errors} = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    // data.preventDefault();
+    console.log(data);
+    props.history.push("/");
+    // props.history.push("/thank-you");
+  };
 
   return (
     <div className="extendedfooter">
@@ -33,7 +38,9 @@ export function Register() {
                 name="firstname"
                 ref={register({required: true, maxLength: 80})}
               />
-              {errors.firstname && "first name is required."}
+              <div className="errors">
+                {errors.firstname && "first name is required."}
+              </div>
             </div>
             <div className="form-group">
               <label htmlFor="lastname">Last Name</label>
@@ -43,7 +50,9 @@ export function Register() {
                 name="lastname"
                 ref={register({required: true, maxLength: 100})}
               />
-              {errors.lastname && "Last name is required."}
+              <div className="errors">
+                {errors.lastname && "Last name is required."}
+              </div>
             </div>
             <div className="form-group">
               <label htmlFor="email">Email</label>
@@ -53,7 +62,7 @@ export function Register() {
                 name="email"
                 ref={register({required: true, pattern: /^\S+@\S+$/i})}
               />
-              {errors.email && "email not valid"}
+              <div className="errors">{errors.email && "email not valid"}</div>
             </div>
             <div className="form-group">
               <label htmlFor="mobile">Mobile number</label>
@@ -63,7 +72,9 @@ export function Register() {
                 name="mobile"
                 ref={register({required: true, minLength: 6, maxLength: 12})}
               />
-              {errors.mobile && "mobile number is required."}
+              <div className="errors">
+                {errors.mobile && "mobile number is required."}
+              </div>
             </div>
             <label className="avatarlabel">Select Avatar:</label>
             <div class="cc-selector">
@@ -125,6 +136,7 @@ export function Register() {
                   <option value="painter">Painter</option>
                   <option value="designer">Designer</option>
                 </select>
+                <div className="errors"></div>
               </div>
             )}
             <div className="form-group">
@@ -135,13 +147,15 @@ export function Register() {
                 name="password"
                 ref={register({required: true, minLength: 8})}
               />
-              {errors.password &&
-                "password is required. must be at least 8 chars long"}
+              <div className="errors">
+                {errors.password && "password must be at least 8 chars long"}
+              </div>
             </div>
 
             <button type="submit" className="btn">
               Register
             </button>
+            <br></br>
             <Link to="/login">Already Registered? Login now!</Link>
           </form>
         </div>
