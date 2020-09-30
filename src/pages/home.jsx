@@ -1,11 +1,11 @@
 import React from "react";
 import Profission from "./component/Profission";
 import "./home.css";
-import {getData, API_BASE} from "../utils/data_helpers";
-import {useHistory} from "react-router-dom";
+import { getData, API_BASE } from "../utils/data_helpers";
+import { useHistory } from "react-router-dom";
 
 const Home = function () {
-  const [professions, setProfessions] = React.useState([{name: "Electric"}]);
+  const [professions, setProfessions] = React.useState([{ name: "Electric" }]);
 
   const history = useHistory();
   const handleClick = (profession) => {
@@ -14,11 +14,11 @@ const Home = function () {
     history.push("/workerList");
   };
 
-  // React.useEffect(() => {
-  //   const url = `/professions`;
+  React.useEffect(() => {
+    const url = `/professions`;
 
-  //   getData(url).then(({ data }) => setProfessions(data));
-  // }, []);
+    getData(url).then(({ data }) => setProfessions(data));
+  }, []);
 
   if (!professions) {
     return <h3>...Loading</h3>;

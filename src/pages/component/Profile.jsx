@@ -48,15 +48,11 @@ const Profile = ({
           <h5>{setCall}</h5>
         </div>
         <button className="back2">
-          <h5>Back</h5>
+          <Link to="/workerList">
+            <h5>Back</h5>
+          </Link>
         </button>
       </div>
-      <Link to="/workerList">
-        {" "}
-        <button className="back2">
-          <h5>back</h5>
-        </button>{" "}
-      </Link>
     </div>
   );
 export default Profile;

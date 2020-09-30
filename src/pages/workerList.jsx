@@ -1,9 +1,7 @@
 import React from "react";
 import Worker from "./component/worker";
-import LocationFilter from "./component/LocationFilter";
 
-import Profission from "./component/Profission";
-import {getData} from "../utils/data_helpers";
+import { getData } from "../utils/data_helpers";
 import "./workerList.css";
 
 import { useHistory } from "react-router-dom";
@@ -12,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const WorkerList = function () {
   const [workers, setWorkers] = React.useState([
-    {professionName: "Electricians"},
+    { professionName: "Electricians" },
   ]);
   const history = useHistory();
 
@@ -26,7 +24,7 @@ const WorkerList = function () {
 
     const url = `/workers/profession/${name}`;
 
-    // getData(url).then(({ data }) => setWorkers(data));
+    getData(url).then(({ data }) => setWorkers(data));
   }, []);
 
   if (!workers) {
@@ -58,7 +56,9 @@ const WorkerList = function () {
           ))}
         </div>
 
-        <button className="back">Back</button>
+        <Link to="/">
+          <button className="back">Back</button>
+        </Link>
       </div>
     </div>
   );

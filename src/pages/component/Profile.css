@@ -50,11 +50,8 @@ h5 {
 
 .discription {
   width: 75vw;
-  /* height: max-content;
-  align-content: center;
-  align-items: stretch; */
   margin-top: 20px;
-  color: white;
+  color: #0f586e;
 }
 
 .moreInfo {
