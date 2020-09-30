@@ -1,10 +1,11 @@
 import React from "react";
-import { withStyles } from "@material-ui/core/styles";
+import {withStyles} from "@material-ui/core/styles";
 import "../../App.scss";
 
 const styles = {
   root: {
     backgroundColor: "white",
+    width: "100%",
     border: "1px solid black",
     borderRadius: "5px",
     padding: "0.5rem",
@@ -50,13 +51,13 @@ const styles = {
 };
 
 function MiniCategory(props) {
-  const { classes, categoryName, workers } = props;
+  const {classes, categoryName, workers} = props;
   console.log(categoryName);
   const miniWorkerBoxes = workers.map((worker) => (
     <div
       key={worker.name}
       className={classes.miniColor}
-      style={{ backgroundImage: `url(${worker.image})` }}
+      style={{backgroundImage: `url(${worker.image})`}}
     />
   ));
 

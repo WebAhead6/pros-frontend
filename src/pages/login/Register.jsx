@@ -12,7 +12,7 @@ export function Register() {
   const onSubmit = (data) => console.log(data);
 
   return (
-    <div>
+    <div className="extendedfooter">
       <Navbar />
 
       <div className="base-container">
