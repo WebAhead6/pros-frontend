@@ -1,7 +1,9 @@
 import React, {Component} from "react";
 import {useForm} from "react-hook-form";
-import loginpic from "../login/logini.png";
+import loginpic from "./logini.png";
 import {Link} from "react-router-dom";
+import Navbar from "../AdminPanel/Navbar";
+import "../AdminPanel/adminPanel.module.css";
 
 export function Register() {
   const [worker, setWorker] = React.useState(false);
@@ -11,9 +13,11 @@ export function Register() {
 
   return (
     <div className="base-container">
+      <Navbar />
+
       <div className="header">Register</div>
       <div className="content">
-        <div className="image">
+        <div className="imageContainer">
           <img src={loginpic}></img>
         </div>
 
@@ -58,9 +62,32 @@ export function Register() {
             />
             {errors.mobile && "mobile number is required."}
           </div>
-          <div className="form-group radio">
-            <label>Worker?</label>
+          <label className="avatarlabel">Select Avatar:</label>
+          <div class="cc-selector">
+            <input id="avatar1" type="radio" name="credit-card" value="1" />
+            <label class="drinkcard-cc avatar1" for="avatar1">
+              1
+            </label>
+            <input id="avatar2" type="radio" name="credit-card" value="2" />
+            <label class="drinkcard-cc avatar2" for="avatar2">
+              2
+            </label>
+            <input id="avatar3" type="radio" name="credit-card" value="3" />
+            <label class="drinkcard-cc avatar3" for="avatar3">
+              3
+            </label>
+            <input id="avatar4" type="radio" name="credit-card" value="4" />
+            <label class="drinkcard-cc avatar4" for="avatar4">
+              4
+            </label>
+            <input id="avatar5" type="radio" name="credit-card" value="5" />
+            <label class="drinkcard-cc avatar5" for="avatar5">
+              5
+            </label>
+          </div>
 
+          <div className="form-group radioSection">
+            <label>Worker?</label>
             <label htmlFor="worker">
               <input
                 name="worker"

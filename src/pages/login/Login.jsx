@@ -1,7 +1,9 @@
 import React, {Component} from "react";
 import {useForm} from "react-hook-form";
-import loginpic from "../login/logini.png";
+import loginpic from "./logini.png";
 import {Link} from "react-router-dom";
+import Navbar from "../AdminPanel/Navbar";
+import "../AdminPanel/adminPanel.module.css";
 
 export function Login() {
   const {register, handleSubmit, errors} = useForm();
@@ -10,9 +12,10 @@ export function Login() {
 
   return (
     <div className="base-container">
+      <Navbar />
       <div className="header">Login</div>
       <div className="content">
-        <div className="image">
+        <div className="imageContainer">
           <img src={loginpic}></img>
         </div>
 

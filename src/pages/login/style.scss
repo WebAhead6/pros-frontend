@@ -1,0 +1,148 @@
+.base-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20%;
+  .header {
+    margin-top: 5%;
+    font-size: 24px;
+    font-family: "Open Sans", sans-serif;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .imageContainer {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      margin-top: 3%;
+      img {
+        width: 30%;
+        height: 30%;
+      }
+    }
+
+    ._form {
+      // margin-top: 2em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: fit-content;
+        label {
+          font-size: 20px;
+          display: flex;
+          justify-content: center;
+        }
+
+        input,
+        select {
+          min-width: 20em;
+          height: 37px;
+          padding: 0px 10px;
+          font-size: 16px;
+          font-family: "Open Sans", sans-serif;
+          background-color: #f3f3f3;
+          border: 0;
+          border-radius: 4px;
+          margin-bottom: 20px;
+          transition: all 250ms ease-in-out;
+          &:hover {
+            //background-color: #ffffff;
+            //box-shadow: 0px 0px 14px 0.3px #0e81ce96;
+            outline: none;
+          }
+        }
+        input[type="radio"] {
+          min-width: 30px;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  .radioSection {
+    padding: 1em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .footer {
+    margin-top: 3em;
+  }
+}
+.cc-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 1em;
+}
+.cc-selector input {
+  // margin: 0;
+  // padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.avatarlabel {
+  display: flex;
+}
+.avatar1 {
+  background-image: url("https://www.w3schools.com/howto/img_avatar.png");
+}
+.avatar2 {
+  background-image: url("https://www.w3schools.com/w3images/avatar2.png");
+}
+.avatar3 {
+  background-image: url("https://www.w3schools.com/w3images/avatar6.png");
+}
+.avatar4 {
+  background-image: url("https://www.w3schools.com/howto/img_avatar2.png");
+}
+.avatar5 {
+  background-image: url("https://www.gs-muhr-am-see.de/pics/img_avatar5.png");
+}
+
+.cc-selector input:active + .drinkcard-cc {
+  opacity: 0.9;
+}
+.cc-selector input:checked + .drinkcard-cc {
+  -webkit-filter: none;
+  -moz-filter: none;
+  filter: none;
+}
+.drinkcard-cc {
+  cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  width: 100px;
+  height: 70px;
+  -webkit-transition: all 100ms ease-in;
+  -moz-transition: all 100ms ease-in;
+  transition: all 100ms ease-in;
+  -webkit-filter: brightness(1.8) grayscale(1) opacity(0.7);
+  -moz-filter: brightness(1.8) grayscale(1) opacity(0.7);
+  filter: brightness(1.8) grayscale(1) opacity(0.7);
+}
+.drinkcard-cc:hover {
+  -webkit-filter: brightness(1.2) grayscale(0.5) opacity(0.9);
+  -moz-filter: brightness(1.2) grayscale(0.5) opacity(0.9);
+  filter: brightness(1.2) grayscale(0.5) opacity(0.9);
+}
+
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+p {
+  margin-bottom: 0.3em;
+}
