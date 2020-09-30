@@ -1,6 +1,5 @@
 import React from "react";
-import {withStyles} from "@material-ui/core/styles";
-// import "./adminPanel.css";
+import { withStyles } from "@material-ui/core/styles";
 import "../../App.scss";
 
 const styles = {
@@ -43,12 +42,6 @@ const styles = {
     margin: "0 auto",
     position: "relative",
     marginBottom: "-3.5px",
-    //     width: 50%;
-    //   height: 25%;
-
-    //   margin: 0 auto;
-    //   display: inline-block;
-    //   position: relative;
     cursor: "pointer",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -57,17 +50,16 @@ const styles = {
 };
 
 function MiniCategory(props) {
-  const {classes, categoryName, workers} = props;
+  const { classes, categoryName, workers } = props;
   console.log(categoryName);
   const miniWorkerBoxes = workers.map((worker) => (
     <div
       key={worker.name}
       className={classes.miniColor}
-      style={{backgroundImage: `url(${worker.image})`}}
-    ></div>
+      style={{ backgroundImage: `url(${worker.image})` }}
+    />
   ));
 
-  //   console.log(classes);
   return (
     <div className={classes.root} onClick={props.goToCategory}>
       <div className={classes.colors}>{miniWorkerBoxes}</div>

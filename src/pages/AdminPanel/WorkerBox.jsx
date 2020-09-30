@@ -1,23 +1,21 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import "./WorkerBox.css";
-import {Link} from "react-router-dom";
 import "./adminPanel.module.css";
 import "../../App.scss";
 
-export class WrokerBox extends Component {
+export class WorkerBox extends Component {
   constructor(props) {
-    super(props);
-    this.state = {accessed: false};
+    super();
+
+    this.state = { accessed: false };
   }
   render() {
     //classes is baiscally what the styles above indicates
-    const {name, id, background} = this.props;
+    const { name, id, background } = this.props;
 
-    // temp img template
-    const backgroundtemp = "https://www.w3schools.com/howto/img_avatar.png";
     return (
       <div
-        style={{backgroundImage: `url(${background})`}}
+        style={{ backgroundImage: `url(${background})` }}
         className="WorkerBox"
       >
         <div className="box-content">
@@ -30,4 +28,4 @@ export class WrokerBox extends Component {
     );
   }
 }
-export default WrokerBox;
+export default WorkerBox;

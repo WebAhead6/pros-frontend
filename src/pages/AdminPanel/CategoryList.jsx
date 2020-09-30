@@ -1,6 +1,6 @@
-import React, {Component} from "react";
-import {Link} from "react-router-dom";
-import {withStyles} from "@material-ui/core/styles";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { withStyles } from "@material-ui/core/styles";
 import MiniCategory from "./MiniCategory";
 import "./adminPanel.module.css";
 import "../../App.scss";
@@ -20,7 +20,6 @@ const styles = {
     alignItems: "flex-start",
     flexDirection: "column",
     flexWrap: "wrap",
-    // border: "1px solid white",
   },
   nav: {
     display: "flex",
@@ -46,25 +45,24 @@ const styles = {
 };
 
 class CategoryList extends Component {
+
   goToCategory(id) {
-    console.log("we inside CATEGORYLIST and we passing this id   ", id);
     this.props.history.push(`/categories/${id}`);
   }
+
   render() {
     //classes are used here in order to apply the styles seen above
-    const {categories, classes} = this.props;
+    const { categories, classes } = this.props;
 
     return (
       <div className={classes.root}>
         <nav className={classes.nav}>
           <h1>React Fixers</h1>
-          <Link to="/category/new">Create NewCategory</Link>
+          <Link to="/category/new">Create category</Link>
         </nav>
         <div className={classes.container}>
           <div className={classes.palettes}>
             {categories.map((category) => (
-              //   <Link to={`/palette/${palette.id}`}>
-
               <MiniCategory
                 key={category.id}
                 {...category}

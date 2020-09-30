@@ -1,5 +1,5 @@
-import React, {Component} from "react";
-import {Link} from "react-router-dom";
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./WorkerDetails.css";
 import Rater from "react-rater";
 import "react-rater/lib/react-rater.css";
@@ -8,15 +8,14 @@ import "../../App.scss";
 
 class WorkerDetails extends Component {
   constructor(props) {
-    super(props);
-    // console.log("PARAMSSSSSS", this.props.match.params);
+    super();
     this.state = {
       stars: 4,
       workerReviews: this.props.worker.reviews,
       expand: false,
       review: "",
     };
-    // console.log(this.state.workerReviews);
+
     this.changeStars = this.changeStars.bind(this);
     this.updateReviews = this.updateReviews.bind(this);
     this.toggleForm = this.toggleForm.bind(this);
@@ -24,16 +23,14 @@ class WorkerDetails extends Component {
   }
 
   changeStars(newRating) {
-    // console.log(newRating.rating);
-    this.setState({stars: newRating.rating});
+    this.setState({ stars: newRating.rating });
   }
 
   toggleForm() {
-    this.setState({expand: !this.state.expand, review: ""});
+    this.setState({ expand: !this.state.expand, review: "" });
   }
 
   handleReviewChange(e) {
-    // console.log(e.target.value);
     this.setState({
       review: e.target.value,
     });
@@ -49,13 +46,13 @@ class WorkerDetails extends Component {
   }
 
   render() {
-    let {worker} = this.props;
-    // console.log(this.props);
+    let { worker } = this.props;
+
     return (
       <div className="WorkerDetails row justify-content-center mt-5">
         <div className="col-11 col-lg-5">
           <div className="WorkerDetails-card card">
-            <img className="card-img-top" src={worker.image} />
+            <img className="card-img-top" src={worker.image} alt="" />
             <div className="card-body">
               <h2 className="card-title">{worker.name}</h2>
               <h3 className="card-subtitle text-muted">NUMBER</h3>
@@ -112,14 +109,14 @@ class WorkerDetails extends Component {
                   </form>
                 </div>
               ) : (
-                <button
-                  type="button"
-                  className="btn btn-info"
-                  onClick={this.toggleForm}
-                >
-                  Add Review
-                </button>
-              )}
+                  <button
+                    type="button"
+                    className="btn btn-info"
+                    onClick={this.toggleForm}
+                  >
+                    Add Review
+                  </button>
+                )}
               <Link
                 to={`/categories/${this.props.match.params.id}`}
                 type="button"
