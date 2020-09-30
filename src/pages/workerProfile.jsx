@@ -18,7 +18,6 @@ const WProfile = function () {
     return <h3>...Loading</h3>;
   }
   return (
-
     <div className="workerProfile-container">
       <h1 className="title">Worker' Name</h1>
 

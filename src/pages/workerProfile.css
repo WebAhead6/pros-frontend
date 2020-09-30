@@ -7,11 +7,14 @@
 }
 
 .title {
-  background-color: #6e3d0f;
+  background-color: #3dc8ff;
   margin-top: 0;
   padding-top: 15px;
   padding-bottom: 15px;
   font-size: 30px;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.back2 {
+  background-color: #3dc8ff;
 }

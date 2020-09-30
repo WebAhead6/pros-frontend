@@ -12,7 +12,11 @@
 }
 
 .title {
-  background-color: #6e3d0f;
+  background: linear-gradient(
+    100deg,
+    rgba(0, 115, 186, 0.907) 30%,
+    #16fff7 120%
+  );
   margin-top: 0;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -40,7 +44,7 @@
 .NewsH,
 .ReviewsH,
 .trustedWorkersH {
-  background-color: #f7a325;
+  background-color: #3dc8ff;
   border-radius: 20px;
   padding: 10px 15px;
   border: none;
