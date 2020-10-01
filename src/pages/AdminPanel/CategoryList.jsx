@@ -61,7 +61,7 @@ class CategoryList extends Component {
     return (
       <div className={classes.root}>
         <nav className={classes.nav}>
-          <h1>React Fixers</h1>
+          <h1>HomeSolutions</h1>
           <Link to="/category/new">Create category</Link>
         </nav>
         <div className={classes.container}>

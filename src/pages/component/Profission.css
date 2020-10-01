@@ -18,6 +18,7 @@
 .imgP {
   height: 100%;
   display: flex;
+  max-width: 50px;
 }
 
 .nameP {
