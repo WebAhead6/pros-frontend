@@ -3,7 +3,6 @@ import Profission from "./component/Profission";
 import "./home.css";
 import { getData, API_BASE } from "../utils/data_helpers";
 import { useHistory } from "react-router-dom";
-// import ComboBox from "./component/autoComplete";
 
 const Home = function () {
   const [professions, setProfessions] = useState([
@@ -24,14 +23,6 @@ const Home = function () {
     const url = `/professions`;
 
     getData(url).then(({ data }) => setProfessions(data));
-  }, []);
-
-  useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutSide);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutSide);
-    };
   }, []);
 
   if (!professions) {
@@ -74,32 +65,17 @@ const Home = function () {
             value={search}
             onChange={(event) => setSearch(event.target.value)}
           />
-          {display && (
-            <div className="autoContainer">
-              {professions
-                .filter(({ name }) => name.indexOf(search.toLowerCase()) > -1)
-                .map((profession) => {
-                  return (
-                    <div
-                      className="option"
-                      tabIndex="0"
-                      onClick={() => setProfeDex(profession.name)}
-                      //onClick = {handleClick}?
-                    >
-                      <span> {profession.name}</span>
-                    </div>
-                  );
-                })}
-            </div>
-          )}
         </div>
-        {professions.map((profession) => (
-          <Profission
-            setProfissionName={profession.name}
-            profIcon={profession.icon}
-            handleClick={handleClick}
-          />
-        ))}
+
+        {professions
+          .filter(({ name }) => name.indexOf(search.toLowerCase()) > -1)
+          .map((profession) => (
+            <Profission
+              setProfissionName={profession.name}
+              profIcon={profession.icon}
+              handleClick={handleClick}
+            />
+          ))}
 
         <br />
       </div>
