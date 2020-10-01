@@ -68,7 +68,7 @@ const Home = function () {
         </div>
 
         {professions
-          .filter(({ name }) => name.indexOf(search.toLowerCase()) > -1)
+          .filter(({ name }) => name.toLowerCase().indexOf(search.toLowerCase()) > -1)
           .map((profession) => (
             <Profission
               setProfissionName={profession.name}
