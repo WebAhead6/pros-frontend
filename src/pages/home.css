@@ -93,3 +93,6 @@ different on the page */
   this css outline: none; removes it*/
   outline: none;
 }
+
+.autoContainer {
+}
