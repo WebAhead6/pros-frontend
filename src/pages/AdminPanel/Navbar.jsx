@@ -7,7 +7,7 @@ import "./Navbar.css";
 export default (props) => (
   <header className="Navbar">
     <div className="logo">
-      <h1>React Fixers</h1>
+      <h1>HomeSolutions</h1>
       <Link exact to="/admin" className="nav-link">
         Fixers
       </Link>
